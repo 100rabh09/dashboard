@@ -19,6 +19,17 @@ export default function PerformancePanel() {
   }, []);
 
   return (
-    <h2>Performance Panel</h2>
+    <Chart>
+      <ChartTitle text="Fund Performance" />
+      <ChartCategoryAxis>
+        <ChartCategoryAxisItem categories={["2014", "2015", "2016", "2017", "2018", "2019", "2020"]} />
+      </ChartCategoryAxis>
+      <ChartSeries>
+        <ChartSeriesItem type="line" data={data} />
+      </ChartSeries>
+      <ChartSeries>
+        <ChartSeriesItem type="line" data={data} color="red"/>
+      </ChartSeries>
+    </Chart>
   )
 }

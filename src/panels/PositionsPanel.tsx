@@ -12,6 +12,16 @@ export default function PositionsPanel() {
   }, []);
 
   return (
-    <h2>Positions Panel</h2>
+    <Grid
+      data={positions}
+      style={{ height: 700 }}
+    >
+      <GridColumn title="Symbol" field="symbol" locked={true} width={100} />
+      <GridColumn title="Name" field="name" />
+      <GridColumn title="Change" field="day_change" />
+      <GridColumn title="% Change" field="change_pct" />
+      <GridColumn title="Volume" field="volume" />
+      <GridColumn title="Market Cap" field="market_cap" />
+    </Grid>
   );
 }
