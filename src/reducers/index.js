@@ -2,8 +2,10 @@ import { combineReducers } from "redux";
 import { persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { projectReducer } from "./ProjectReducer";
+// import all reducers here
+import { project } from "./ProjectReducer";
 
+// include all whitelist reducer
 const persistConfig = {
   timeout: 0,
   key: 'root',
@@ -14,7 +16,7 @@ const persistConfig = {
 
 // combineReducers: to make one big object called store
 const rootReducer = combineReducers({
-  project: projectReducer,
+  project,
 });
 
 // rootReducer: main object thrown into store

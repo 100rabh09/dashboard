@@ -7,7 +7,7 @@ const initialState = {
   projectError: getApiError(),
 };
 
-export const projectReducer = (state = initialState, action) => {
+export const project = (state = initialState, action) => {
 
   switch (action.type) {
     case getActionStates(PROJECT_DATA).inProgress:

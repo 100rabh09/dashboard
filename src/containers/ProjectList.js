@@ -19,8 +19,11 @@ class ProjectList extends Component {
   }
 }
 
-function mapStateToProps(state, ){
-return {project: state.project}
+function mapStateToProps(state){
+return {
+  project: state.project
+}
 }
 
+// connect HOC(higher order component) function
 export default  connect(mapStateToProps, {projectData})(ProjectList);

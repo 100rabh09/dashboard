@@ -98,25 +98,3 @@ export function isEmpty(obj) {
     return true;
 }
 
-export function immutableToJS(obj) {
-    if (typeof obj === 'object' && obj !== null) {
-        return obj.toJS();
-    }
-    return obj;
-}
-
-export const isValidPhone = (text) => {
-    const phoneno = /^[0-9]{10}$/;
-    if (phoneno.test(text) === false) {
-        return false;
-    }
-    return true;
-};
-
-export const isValidOtp = (text) => {
-    const otptext = /^[0-9]{6}$/;
-    if (otptext.test(text) === false) {
-        return false;
-    }
-    return true;
-};

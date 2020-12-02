@@ -1,5 +1,4 @@
-import {applyMiddleware, compose, createStore} from 'redux';
-// import appReducer from './reducers';
+import {applyMiddleware, createStore} from 'redux';
 import ReduxThunk from 'redux-thunk';
 import {persistStore} from 'redux-persist';
 import rootReducer from './reducers';
