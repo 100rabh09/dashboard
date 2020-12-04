@@ -5,19 +5,19 @@ import AllocationPanel from "./panels/AllocationPanel";
 import PerformancePanel from "./panels/PerformancePanel";
 import PositionsPanel from "./panels/PositionsPanel";
 import ProjectList from "./containers/ProjectList";
+import CompletedProjectList from "./containers/CompletedProjectList";
 
 export default function Dashboard() {
   return (
     <div className="panels">
-      <ProjectList/>
       <div className="panel-info">
         <InfoPanel />
       </div>
       <div className="panel-allocation">
-        <AllocationPanel />
+        <ProjectList/>
       </div>
       <div className="panel-balance">
-        <PerformancePanel />
+        <CompletedProjectList />
       </div>
       <div className="panel-positions">
         <PositionsPanel />

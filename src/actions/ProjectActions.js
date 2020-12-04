@@ -31,9 +31,9 @@ export const projectDataInProgress = () => {
 export const projectData = () => {
   console.log('projectData action called ...');
 
-  var bodyFormData = new FormData();  
-  bodyFormData.append("sql", `SELECT article_id,count(project_id) FROM jobs WHERE modified BETWEEN "2020-10-01 00:00:00" AND "2020-11-10 23:59:59" GROUP BY article_id`);
-  bodyFormData.append("dbsource", 'nglims'); 
+  var bodyFormData = new FormData();
+  bodyFormData.append("sql", `SELECT article_id,count(project_id) FROM jobs WHERE modified BETWEEN "2020-10-01 00:00:00" AND "2020-11-10 23:59:59" AND article_id IS NOT NULL GROUP BY article_id`);
+  bodyFormData.append("dbsource", 'nglims');
 
   return (dispatch) => {
     fetchData.post(
